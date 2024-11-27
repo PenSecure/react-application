@@ -1,4 +1,4 @@
-![Pensmart Architecture](pensmart-architecture.png)
+![Pensmart Architecture](Pensmart-architecture.png)
 
 
 # react-and-spring-data-rests- tester
