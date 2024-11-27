@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-west-1
-  ECR_REPOSITORY: "728413774894.dkr.ecr.us-west-1.amazonaws.com/spring"
+  ECR_REPOSITORY: "spring"
   ECS_CLUSTER: "dev-cluster"
   ECS_SERVICE: "dev-spring-service-svc"
   CONTAINER_NAME: "dev-spring-service-svc"
