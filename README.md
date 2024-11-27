@@ -43,34 +43,37 @@ For this demonstration, the **us-west-1** AWS region is used. If you prefer a di
 
 ### Step 1: Clone the Repository and Initialize Terraform
 
-1. Clone the project:
+1. **Fork the Repository**:
+   - Repository URL: [https://github.com/PenSecure/spring-service](https://github.com/PenSecure/spring-service)
+
+2. Clone the project:
    ```bash
-   git clone [_URL]
-   cd pensmart-project
+   git clone the forked repo
+   cd spring-service/pensmart-project
    ```
 
-2. Initialize Terraform:
+3. Initialize Terraform:
    ```bash
    terraform init
    ```
 
-3. Create a new workspace:
+4. Create a new workspace:
    ```bash
    terraform workspace new <dev>
    # Replace <dev> with the desired environment name (e.g., staging, production)
    ```
 
-4. Plan your infrastructure:
+5. Plan your infrastructure:
    ```bash
    terraform plan -var-file=vars/dev.tfvars -out=pensmart.tfplan
    ```
 
-5. Apply the plan to provision resources:
+6. Apply the plan to provision resources:
    ```bash
    terraform apply "pensmart.tfplan"
    ```
 
-6. Wait for the process to complete. Terraform will provision all required infrastructure components.
+7. Wait for the process to complete. Terraform will provision all required infrastructure components.
 
 ---
 
