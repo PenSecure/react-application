@@ -1,12 +1,15 @@
 ![Pensmart Architecture](Pensmart-architecture.png)
 
 
-# react-and-spring-data-rests- tester
+# react-and-spring-data-rest
 
-The application has a react frontend and a Spring Boot Rest API, packaged as a single module Maven application. You can build the application using maven and run it as a Spring Boot application using the flat jar generated in target (`java -jar target/*.jar`).
+The application consists of a React frontend and a Spring Boot REST API, packaged together as a single-module Maven application. It includes a CI/CD pipeline configured to automatically trigger on a push or pull request to the main branch. The pipeline builds the application code, packages it into a Docker image, and pushes the image to AWS ECR (Elastic Container Registry). The image is then automatically deployed to AWS ECS (Elastic Container Service), which is connected to a standalone RDS database for persistent storage.  
 
-You can test the main API using the following curl commands (shown with its output):
+Monitoring and logging are integrated into the container services to track key metrics such as CPU, memory, and storage usage. Additionally, application logs are forwarded to AWS CloudWatch to monitor the application's health and diagnose errors when they occur.  
 
+The codebase also includes Terraform scripts that automate the provisioning of the entire infrastructure required to deploy the application. This includes all necessary resource mappings and configurations to ensure seamless integration across services.  
+
+To deploy the solution, the Terraform infrastructure must be provisioned first. Once the infrastructure is in place, the application can be deployed using the pipeline. The guide below provides a detailed step-by-step approach for deploying both the infrastructure and the application.
 ---
 
 To see the frontend, navigate to <aws-alb-url/login>. You are immediately redirected to a login form. Log in as `greg/turnquist`
